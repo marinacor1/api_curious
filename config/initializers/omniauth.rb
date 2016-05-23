@@ -1,3 +1,3 @@
 Rails.application.config.middleware.use OmniAuth::Builder do
-  provider :linkedin, "key1", "key2"
+  provider :github, ENV["key1"], ENV["key2"]
 end
