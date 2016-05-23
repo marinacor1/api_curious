@@ -1,7 +1,10 @@
-Welcome to API Curious.
-This is preliminary practice for my personal project, an alumni networking app for the Turing Software Development community.
+<div class="nav_bar">
   <% if current_user %>
   Hello, <%= current_user.name %>
   <% else %>
   <%= link_to "Sign in with Github", github_login_path %>
   <% end %>
+</div>
+
+Welcome to API Curious.
+This is preliminary practice for my personal project, an alumni networking app for the Turing Software Development community.
