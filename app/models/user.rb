@@ -1,9 +1,6 @@
 class User < ActiveRecord::Base
   def self.from_omniauth(auth_info)
-    where(uid: auth_info[:uid]).first_or_create do |new_user| #take the omniauth authentication info
-      #read the user_id from the auth_info. if user exists with the uid value of that user_id then
-      #we've found the person and can return her
-      #otherwise create them:
+    where(uid: auth_info[:uid]).first_or_create do |new_user|
       new_user.uid = auth_info.uid
       new_user.name = auth_info.extra.raw_info
       new_user.screen_name = auth_info.extra.raw_info.screen_name
