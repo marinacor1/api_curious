@@ -6,7 +6,6 @@ class User < ActiveRecord::Base
       #otherwise create them:
       new_user.uid = auth_info.uid
       new_user.name = auth_info.info["name"]
-      binding.pry
       new_user.screen_name = auth_info.credentials.oauth_token
       new_user.oauth_token_secret = auth_info.credentials.oauth_token_secret
     end
