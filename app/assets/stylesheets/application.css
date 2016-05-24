@@ -15,4 +15,14 @@
  */
 
  .root-background {
+   padding: 0px;
+   background: url(concrete_seamless.png) no-repeat center;
+   background-size: cover;
+   height: 700px;
+   text-deocration: none !important;
+ }
+
+ .gh-icon {
+   width: 500px;
+   height: 500px;
  }
