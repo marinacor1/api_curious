@@ -14,6 +14,8 @@
  *= require_self
  */
 
- .nav_bar {
-   
+ .root-background {
+   background-color: #99ccff;
+   height: 700px;
+   width: 100%
  }
