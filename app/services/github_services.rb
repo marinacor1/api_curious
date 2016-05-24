@@ -1,11 +1,11 @@
 class GithubServices
 
-  def initialize
+  def initialize(current_user)
     @connection = Faraday.new(url: "https://api.github.com")
     @connection.headers["Authorization"] = "token #{current_user.oauth_token}"
   end
 
-  def get_your_user_info
+  def get_user
     @connection.get "/users/marinacor1"
   end
 
