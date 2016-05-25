@@ -2,7 +2,7 @@
   <p>All The Repos</p>
 <div class= "repos-index">
 <% @repos.each do |repo| %>
-<p><%=repo[:name]%></p>
+<p><%= link_to repo[:name], repo[:link]%></p>
 <% end %>
 </div>
 </div>
