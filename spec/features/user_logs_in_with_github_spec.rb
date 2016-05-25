@@ -6,15 +6,19 @@ require 'rails_helper'
       provider: 'github',
       extra: {
         raw_info: {
-          uid: "1234",
-          name: "Horace",
-          screen_name: "worace"
-        }
+                    uid: "1234",
+                    name: "Horace",
+                    screen_name: "worace"
+                    },
+
       },
       credentials: {
         oauth_token: "pizza",
         oauth_token_secret: "secretpizza"
-      }
+      },
+          info: {
+            image: "lj"
+          }
       })
   end
 

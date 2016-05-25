@@ -6,7 +6,7 @@ class GithubServices
   end
 
   def get_user
-    @connection.get "/users/marinacor1/"
+    @connection.get "/users/marinacor1/" #interpolate current_user.screen_name
   end
 
   def parse(response)
