@@ -29,8 +29,15 @@
  }
 
  .user-image {
+  padding-left: 600px;
    width: 100px;
    height: 100px;
+ }
+
+ .user-texts {
+   width: 200px;
+   text-align: center;
+   padding-left: 500px;
  }
 
  .fa {
