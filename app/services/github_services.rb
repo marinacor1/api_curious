@@ -33,6 +33,14 @@ class GithubServices
     @connection.get "#{parse(get_user)[:following_url]}"
   end
 
+  def get_organizations
+    @connection.get "#{parse(get_user)[:organization_url]}"
+  end
+
+  def get_feeds
+    @connection.get "#{parse(get_user)[:feeds_url]}"
+  end
+
   def user_hash
     parse(get_image)
   end
