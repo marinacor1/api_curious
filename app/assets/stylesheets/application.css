@@ -24,6 +24,8 @@
 
  .gh-icon {
    padding-left: 500px;
+   font-size: 200%;
+   font-family: Ubuntu, arial;
  }
 
  .user-image {
@@ -32,6 +34,6 @@
  }
 
  .fa {
-   font-size: 950% !important;
+   font-size: 450% !important;
    padding: 20px;
  }
