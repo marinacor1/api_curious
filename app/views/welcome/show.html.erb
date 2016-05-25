@@ -2,4 +2,10 @@
   <div class="github-icon">
   <p class="gh-icon">MyGit<i class="fa fa-github fa-6" aria-hidden="true"></i>Place</p>
 </div>
+<div class="user-image">
+  <% if current_user %>
+    <p><%= image_tag(current_user.image, width: "100", height: "100") %></p>
+    <p><%= current_user.screen_name %></p>
+  <% end %>
+</div>
 </div>
