@@ -12,8 +12,17 @@ class GithubInformation
   end
 
  def self.find_image
-    user_array = GithubServices.new.user_hash
+    user_array = GithubServices.new.user_hash(get_image)
     user_array.image
+ end
+
+ def self.find_starred
+    user_array = GithubServices.new.star_hash
+    user_array.starred_url
+ end
+
+ def self.find_repos
+    temp_repo_hash = GithubServices.new.repo_hash
  end
 
 end
