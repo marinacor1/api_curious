@@ -8,7 +8,8 @@ require 'rails_helper'
         raw_info: {
                     uid: "1234",
                     name: "Horace",
-                    screen_name: "worace"
+                    screen_name: "worace",
+                    avatar_url: "ljsfls"
                     },
 
       },
@@ -17,7 +18,7 @@ require 'rails_helper'
         oauth_token_secret: "secretpizza"
       },
           info: {
-            image: "lj"
+            nickname: "lj"
           }
       })
   end
