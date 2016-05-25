@@ -36,9 +36,9 @@ class GithubServices
   #   @connection.get "#{parse(get_user)[:following_url]}"
   # end
   #
-  # def get_organizations
-  #   @connection.get "#{parse(get_user)[:organization_url]}"
-  # end
+  def get_organizations
+    @connection.get "organizations"
+  end
   #
   # def get_feeds
   #   @connection.get "#{parse(get_user)[:feeds_url]}"
@@ -53,8 +53,12 @@ class GithubServices
   end
 
   def star_hash
-   stars = parse(get_starred)
-   stars.map {|repo| repo[:name]}
+    stars = parse(get_starred)
+    stars.map {|repo| repo[:name]}
+  end
+
+  def orgs_array
+    orgs = parse(get_organizations)
   end
 
 

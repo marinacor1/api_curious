@@ -5,13 +5,6 @@ class Repo
     @service ||= GithubServices.new(user)
   end
 
-  # def self.service(user)
-  # end
-
-  # def self.initialize_service(service)
-  #   @service = service
-  # end
-
   def all
     repo_array = service.repo_hash
     repo_array.map do |repo|
@@ -22,5 +15,6 @@ class Repo
   def starred
     starred_repo_array = service.star_hash
   end
+
 
 end
