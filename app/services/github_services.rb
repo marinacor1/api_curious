@@ -1,8 +1,8 @@
 class GithubServices
 
-  def initialize(current_user)
+  def initialize(oauth_token)
     @connection = Faraday.new(url: "https://api.github.com")
-    @connection.headers["Authorization"] = "token #{current_user.oauth_token}"
+    @connection.headers["Authorization"] = "token #{oauth_token}"
   end
 
   def get_user
@@ -13,6 +13,13 @@ class GithubServices
     JSON.parse(response.body, symbolize_names: true)
   end
 
+  def get_image
+    @connection.get "/users/marinacor1"
+  end
+
+  def user_hash
+    parse(get_image)
+  end
 
 #map for apis
 #curl -u "marinacor1" https://api.github.com

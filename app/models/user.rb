@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+
   def self.from_omniauth(auth_info)
     where(uid: auth_info[:uid]).first_or_create do |new_user|
       # new_user.image = auth_info.info.image
@@ -13,5 +14,6 @@ class User < ActiveRecord::Base
       # new_user.basic_info = auth_info.extra.raw_info
     end
   end
+
 
 end
