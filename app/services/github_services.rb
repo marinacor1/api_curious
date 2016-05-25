@@ -6,7 +6,7 @@ class GithubServices
   end
 
   def get_user
-    @connection.get "/users/marinacor1"
+    @connection.get "/users/marinacor1/"
   end
 
   def parse(response)
@@ -14,7 +14,23 @@ class GithubServices
   end
 
   def get_image
-    @connection.get "/users/marinacor1"
+    @connection.get "#{parse(get_user)[:url]}"
+  end
+
+  def get_starred
+    @connection.get "#{parse(get_user)[:starred_url]}"
+  end
+
+  def get_repos
+    @connection.get "#{parse(get_user)[:repos_url]}"
+  end
+
+  def get_followers
+    @connection.get "#{parse(get_user)[:followers_url]}"
+  end
+
+  def get_following
+    @connection.get "#{parse(get_user)[:following_url]}"
   end
 
   def user_hash
