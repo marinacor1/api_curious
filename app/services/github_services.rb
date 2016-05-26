@@ -23,19 +23,19 @@ class GithubServices
   end
 
   def get_organizations
-    @connection.get "organizations"
+    @connection.get "/users/#{@user["screen_name"]}/orgs"
   end
 
   def get_following_feed
-    @connection.get "users/#{@user["screen_name"]}/received_events"
+    @connection.get "/users/#{@user["screen_name"]}/received_events"
   end
 
   def get_my_feed
-    @connection.get "users/#{@user["screen_name"]}/events"
+    @connection.get "/users/#{@user["screen_name"]}/events"
   end
 
   def get_contributions
-    @connection.get "users/#{@user["screen_name"]}/contributions/"
+    @connection.get "/users/#{@user["screen_name"]}/contributions/"
   end
 
   def get_gists
