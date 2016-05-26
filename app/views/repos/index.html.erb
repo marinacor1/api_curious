@@ -1,8 +1,8 @@
 <div class ="container">
   <p>All The Repos</p>
-<div class= "repos-index">
-<% @repos.each do |repo| %>
-<p><%= link_to repo[:name], repo[:link]%></p>
-<% end %>
-</div>
+  <div class= "repos-index">
+    <% @repos.each do |repo| %>
+      <p><%= link_to repo[:name], repo[:link]%></p>
+    <% end %>
+  </div>
 </div>

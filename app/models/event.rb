@@ -1,4 +1,4 @@
-class Event < OpenStruct
+class Event
   attr_reader :service
 
   def initialize(user)
@@ -7,8 +7,8 @@ class Event < OpenStruct
 
   def type_change(type)
     types = {"CreateEvent" => "created",
-             "WatchEvent" => "starred",
-             "ForkEvent" => "forked",
+             "WatchEvent"  => "starred",
+             "ForkEvent"   => "forked",
              "MemberEvent" => "added a collaborator to" }
     new_type = types[type]
   end
