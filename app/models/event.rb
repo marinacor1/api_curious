@@ -29,9 +29,6 @@ class Event
 
   def my_all
     events = service.my_events_array
-    events.map do |event|
-      event[:payload]
-    end
   end
 
 end
