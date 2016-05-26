@@ -1,0 +1,8 @@
+<div class="container">
+  <h2>All Your Gists</h2>
+  <h4> Click link for a raw version of your gist</h4>
+  <br>
+  <% @gists.each do |agist| %>
+    <p><%= link_to agist[:name], agist[:link] %></p>
+  <% end %>
+</div>
