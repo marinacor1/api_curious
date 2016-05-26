@@ -9,7 +9,7 @@
     </div>
     <div class="col-md-4 user-texts">
       <p>Welcome, <%= current_user.screen_name %></p>
-      <p>Name: <%= current_user[:name] %></p>
+      <p>Name: <%= current_user.name %></p>
       <p> List of All Your Repos: <%= link_to "All Repos", repos_path %></p>
       <p> List of all Organizations: <%= link_to "All Organizations", organizations_path %></p>
       <p> Summary : <%= link_to "Feed from Users You Follow", events_path %> </p>
