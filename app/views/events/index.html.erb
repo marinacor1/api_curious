@@ -1,0 +1,6 @@
+<div class="container">
+<h2>What Your Friends Are Up To</h2>
+<% @events.each do |event| %>
+<p><%= event[:name] %> <%= event[:type] %> <%= event[:repo_name] %></p>
+<% end %>
+</div>
