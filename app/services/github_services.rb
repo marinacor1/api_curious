@@ -34,6 +34,10 @@ class GithubServices
     @connection.get "users/marinacor1/events"
   end
 
+  def get_contributions
+    @connection.get "users/marinacor1/contributions/"
+  end
+
   def repo_hash
     parse(get_repos)
   end

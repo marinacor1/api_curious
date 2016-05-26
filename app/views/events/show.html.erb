@@ -1,0 +1,6 @@
+<div class="container">
+  <h2>Your Recent Activity</h2>
+  <% @my_events.each do |event| %>
+    <p>You contributed to <%= link_to event[:repo], event[:url] %></p>
+  <% end %>
+</div>

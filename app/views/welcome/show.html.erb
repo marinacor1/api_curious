@@ -9,10 +9,10 @@
     <div class="col-md-4 user-texts">
       <p>Welcome, <%= current_user.screen_name %></p>
       <p>Name: <%= current_user[:name] %></p>
-      <p> <%= link_to "List of All Your Repos", repos_path %></p>
-      <p> <%= link_to "List of All Your Organizations", organizations_path %></p>
-      <p> <%= link_to "Summary Feed from Users You Follow:", events_path %> </p>
-      <p> <%= link_to "Your Recent Activity:", event_path(current_user)  %></p>
+      <p> List of All Your Repos: <%= link_to "All Repos", repos_path %></p>
+      <p> List of all Organizations: <%= link_to "All Organizations", organizations_path %></p>
+      <p> Summary : <%= link_to "Feed from Users You Follow:", events_path %> </p>
+      <p> Your Recent Activity: <%= link_to "Commits", event_path(current_user)  %></p>
       <p>Following: <%= current_user.following %></p>
       <p>Followers: <%= current_user.followers %></p>
       <p>Starred Repos: <%= @starred.count %></p>
