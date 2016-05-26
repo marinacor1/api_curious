@@ -14,6 +14,7 @@ class Repo
 
   def starred
     starred_repo_array = service.star_hash
+    starred_repo_array.map {|repo| repo[:name]}
   end
 
 

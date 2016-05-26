@@ -43,8 +43,7 @@ class GithubServices
   end
 
   def star_hash
-    stars = parse(get_starred)
-    stars.map {|repo| repo[:name]}
+    parse(get_starred)
   end
 
   def orgs_array
