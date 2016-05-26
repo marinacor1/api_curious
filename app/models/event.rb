@@ -29,6 +29,7 @@ class Event < OpenStruct
 
   def my_all
     events = service.my_events_array
+
     all = events.map do |event|
       {repo: event[:repo][:name], url: event[:repo][:url], other: event}
     end

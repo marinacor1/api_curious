@@ -7,7 +7,7 @@ class GithubServices
   end
 
   def get_user
-    @connection.get "/users/marinacor1" #interpolate current_user.screen_name
+    @connection.get "/users/#{@user.screen_name}"
   end
 
   def parse(response)
@@ -27,15 +27,15 @@ class GithubServices
   end
 
   def get_following_feed
-    @connection.get "users/marinacor1/received_events"
+    @connection.get "users/#{@user.screen_name}/received_events"
   end
 
   def get_my_feed
-    @connection.get "users/marinacor1/events"
+    @connection.get "users/#{@user.screen_name}/events"
   end
 
   def get_contributions
-    @connection.get "users/marinacor1/contributions/"
+    @connection.get "users/#{@user.screen_name}/contributions/"
   end
 
   def repo_hash
