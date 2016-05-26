@@ -26,4 +26,12 @@ class Event
       {name: event[:actor][:login], type: type_change(event[:type]), repo_name: event[:repo][:name]}
     end
   end
+
+  def my_all
+    events = service.my_events_array
+    events.map do |event|
+      event[:payload]
+    end
+  end
+
 end

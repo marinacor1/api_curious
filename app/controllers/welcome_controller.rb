@@ -6,8 +6,7 @@ class WelcomeController < ApplicationController
       organization = Organization.new(current_user)
       @organizations = organization.all
       event = Event.new(current_user)
-      @events = event.all
-
+      @my_events = event.my_all
     end
   end
 end

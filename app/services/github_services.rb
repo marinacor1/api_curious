@@ -17,7 +17,7 @@ class GithubServices
   def get_starred
     @connection.get "/user/starred"
   end
-  #
+
   def get_repos
     @connection.get "/user/repos"
   end
@@ -49,5 +49,9 @@ class GithubServices
 
   def events_array
     parse(get_following_feed)
+  end
+
+  def my_events_array
+    parse(get_my_feed)
   end
 end
