@@ -6,18 +6,11 @@ class Event < OpenStruct
   end
 
   def type_change(type)
-    if type == "CreateEvent"
-      new_type = "created"
-    elsif type == "WatchEvent"
-      new_type = "starred"
-    elsif type == "ForkEvent"
-      new_type = "forked"
-    elsif type == "MemberEvent"
-      new_type = "added a collaborator to"
-    else
-      type = new_type
-    end
-    new_type
+    types = {"CreateEvent" => "created",
+             "WatchEvent" => "starred",
+             "ForkEvent" => "forked",
+             "MemberEvent" => "added a collaborator to" }
+    new_type = types[type]
   end
 
   def all
