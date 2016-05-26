@@ -11,10 +11,10 @@
       <p><%= current_user[:name] %></p>
       <p> List of Repos: <%= link_to "All Your Repos", repos_path %></p>
       <p> List of Organizations: <%= link_to "All Organizations", organizations_path %></p>
-      <p> Summary Feed from Users You Follow:</p>
+      <p> Summary Feed from Users You Follow: <%= link_to "See What Your Friends Are Up To", events_path %> </p>
       <p> Your Recent Activity: </p>
-      <p>Following:</p>
-      <p>Followers: </p>
+      <p>Following: <%= current_user.following %></p>
+      <p>Followers: <%= current_user.followers %></p>
       <p>Starred Repos: <%= @starred.count %></p>
       <p> Your Contributions: </p>
     </div>

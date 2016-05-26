@@ -5,6 +5,9 @@ class WelcomeController < ApplicationController
       @starred = repo.starred
       organization = Organization.new(current_user)
       @organizations = organization.all
+      event = Event.new(current_user)
+      @events = event.all
+
     end
   end
 end

@@ -26,6 +26,14 @@ class GithubServices
     @connection.get "organizations"
   end
 
+  def get_following_feed
+    @connection.get "users/marinacor1/received_events"
+  end
+
+  def get_my_feed
+    @connection.get "users/marinacor1/events"
+  end
+
   def repo_hash
     parse(get_repos)
   end
@@ -37,5 +45,9 @@ class GithubServices
 
   def orgs_array
     orgs = parse(get_organizations)
+  end
+
+  def events_array
+    parse(get_following_feed)
   end
 end
