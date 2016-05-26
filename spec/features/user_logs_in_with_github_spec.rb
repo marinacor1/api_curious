@@ -9,7 +9,10 @@ require 'rails_helper'
                     uid: "1234",
                     name: "Horace",
                     screen_name: "worace",
-                    avatar_url: "ljsfls"
+                    avatar_url: "ljsfls",
+                    followers: "1",
+                    following: "2",
+                    starred_url: "lsjfs"
                     },
 
       },

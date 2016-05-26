@@ -6,9 +6,9 @@ class Organization
   end
 
   def all
-    orgs = service.orgs_array.map do |org|
-      {name: org[:login], link: org[:url] }
-    end
+      orgs = service.orgs_array.map do |org|
+        {name: org[:login], link: org[:url] }
+      end
   end
 
 end

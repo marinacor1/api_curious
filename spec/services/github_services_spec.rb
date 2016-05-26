@@ -1,6 +1,7 @@
 require 'rails_helper'
 
-describe GithubService do
-
-
-end
+# xdescribe GithubService do
+#   it "returns all starred repos", :vcr do
+#   service = GithubServices.new
+# end
+# end
