@@ -14,6 +14,7 @@
       <p> List of all Organizations: <%= link_to "All Organizations", organizations_path %></p>
       <p> Summary : <%= link_to "Feed from Users You Follow", events_path %> </p>
       <p> Your Recent Activity: <%= link_to "Commits", event_path(current_user)  %></p>
+      <p> All Your Gists: <%= link_to "Gists", gists_path %>
       <p>Following: <%= current_user.following %></p>
       <p>Followers: <%= current_user.followers %></p>
       <p>Starred Repos: <%= @starred.count %></p>

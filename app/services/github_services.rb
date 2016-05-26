@@ -7,7 +7,7 @@ class GithubServices
   end
 
   def get_user
-    @connection.get "/users/#{@user.screen_name}"
+    @connection.get "/users/#{@user["screen_name"]}"
   end
 
   def parse(response)
@@ -27,15 +27,23 @@ class GithubServices
   end
 
   def get_following_feed
-    @connection.get "users/#{@user.screen_name}/received_events"
+    @connection.get "users/#{@user["screen_name"]}/received_events"
   end
 
   def get_my_feed
-    @connection.get "users/#{@user.screen_name}/events"
+    @connection.get "users/#{@user["screen_name"]}/events"
   end
 
   def get_contributions
-    @connection.get "users/#{@user.screen_name}/contributions/"
+    @connection.get "users/#{@user["screen_name"]}/contributions/"
+  end
+
+  def get_gists
+    @connection.get "/users/#{@user["screen_name"]}/gists"
+  end
+
+  def gists_hash
+    parse(get_gists)
   end
 
   def repo_hash
